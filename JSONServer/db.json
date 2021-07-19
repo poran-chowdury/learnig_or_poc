@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Towfiqul",
+      "LastName": "Islam",
+      "subjectId": "1"
+    },
+    {
+      "id": 2,
+      "firstName": "FirstName",
+      "LastName": "LastName",
+      "subjectId": "2"
+    },
+    {
+      "id": 3,
+      "firstName": "TestFirst",
+      "LastName": "TestLast",
+      "subjectId": "2"
+    }
+  ],
+  "subjects": [
+    {
+      "id": 1,
+      "name": "Computer Science"
+    },
+    {
+      "id": 2,
+      "name": "Test Subject"
+    }
+  ]
+}
