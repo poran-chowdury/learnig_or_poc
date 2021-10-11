@@ -1,0 +1,465 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-07-27T11:38:43.279Z",
+        "before": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\n\tat com.ffm.utils.TestBase.initializeDriver(TestBase.java:43)\n\tat com.ffm.stepDefinitions.Hooks.setup(Hooks.java:12)\n",
+              "duration": 18616000000,
+              "status": "failed"
+            },
+            "match": {
+              "location": "com.ffm.stepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "FFM OT Member should login successfully",
+        "description": "",
+        "id": "ffm-ot-member-login-panel;ffm-ot-member-should-login-successfully",
+        "after": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\n\tat com.ffm.stepDefinitions.Hooks.tearDown(Hooks.java:31)\n",
+              "duration": 5000000000,
+              "status": "failed"
+            },
+            "match": {
+              "location": "com.ffm.stepDefinitions.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 4,
+            "name": "As an FFM OT member I should give the baseURl to navigate the login panel",
+            "match": {
+              "location": "com.ffm.stepDefinitions.FFM_OT_Member_Login_Steps.as_an_ffm_ot_member_i_should_give_the_base_u_rl_to_navigate_the_login_panel()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "I will input registered email and password",
+            "match": {
+              "location": "com.ffm.stepDefinitions.FFM_OT_Member_Login_Steps.i_will_input_registered_email_and_password()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "Click on the login button",
+            "match": {
+              "location": "com.ffm.stepDefinitions.FFM_OT_Member_Login_Steps.click_on_the_login_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "I should be able to navigate to the FFM platform",
+            "match": {
+              "location": "com.ffm.stepDefinitions.FFM_OT_Member_Login_Steps.i_should_be_able_to_navigate_to_the_ffm_platform()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FunctionalTest"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-27T11:39:07.012Z",
+        "before": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\n\tat com.ffm.utils.TestBase.initializeDriver(TestBase.java:43)\n\tat com.ffm.stepDefinitions.Hooks.setup(Hooks.java:12)\n",
+              "duration": 45000000,
+              "status": "failed"
+            },
+            "match": {
+              "location": "com.ffm.stepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "FFM OT Member should login successfully through datadriven",
+        "description": "",
+        "id": "ffm-ot-member-login-panel;ffm-ot-member-should-login-successfully-through-datadriven;;2",
+        "after": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\n\tat com.ffm.stepDefinitions.Hooks.tearDown(Hooks.java:31)\n",
+              "duration": 5001000000,
+              "status": "failed"
+            },
+            "match": {
+              "location": "com.ffm.stepDefinitions.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "As an FFM OT member I should give the baseURl to navigate the login panel",
+            "match": {
+              "location": "com.ffm.stepDefinitions.FFM_OT_Member_Login_Steps.as_an_ffm_ot_member_i_should_give_the_base_u_rl_to_navigate_the_login_panel()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "I will input registered \"user@example.com\" and \"string\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"user@example.com\"",
+                  "offset": 24
+                },
+                {
+                  "val": "\"string\"",
+                  "offset": 47
+                }
+              ],
+              "location": "com.ffm.stepDefinitions.FFM_OT_Member_Login_Steps.i_will_input_registered_email_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "Click on the login button",
+            "match": {
+              "location": "com.ffm.stepDefinitions.FFM_OT_Member_Login_Steps.click_on_the_login_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "I should be able to navigate to the FFM platform",
+            "match": {
+              "location": "com.ffm.stepDefinitions.FFM_OT_Member_Login_Steps.i_should_be_able_to_navigate_to_the_ffm_platform()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-27T11:39:12.080Z",
+        "before": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\n\tat com.ffm.utils.TestBase.initializeDriver(TestBase.java:43)\n\tat com.ffm.stepDefinitions.Hooks.setup(Hooks.java:12)\n",
+              "duration": 95000000,
+              "status": "failed"
+            },
+            "match": {
+              "location": "com.ffm.stepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "FFM OT Member should login successfully through datadriven",
+        "description": "",
+        "id": "ffm-ot-member-login-panel;ffm-ot-member-should-login-successfully-through-datadriven;;3",
+        "after": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\n\tat com.ffm.stepDefinitions.Hooks.tearDown(Hooks.java:31)\n",
+              "duration": 5001000000,
+              "status": "failed"
+            },
+            "match": {
+              "location": "com.ffm.stepDefinitions.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "As an FFM OT member I should give the baseURl to navigate the login panel",
+            "match": {
+              "location": "com.ffm.stepDefinitions.FFM_OT_Member_Login_Steps.as_an_ffm_ot_member_i_should_give_the_base_u_rl_to_navigate_the_login_panel()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "I will input registered \"user@example.com\" and \"string\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"user@example.com\"",
+                  "offset": 24
+                },
+                {
+                  "val": "\"string\"",
+                  "offset": 47
+                }
+              ],
+              "location": "com.ffm.stepDefinitions.FFM_OT_Member_Login_Steps.i_will_input_registered_email_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "Click on the login button",
+            "match": {
+              "location": "com.ffm.stepDefinitions.FFM_OT_Member_Login_Steps.click_on_the_login_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "I should be able to navigate to the FFM platform",
+            "match": {
+              "location": "com.ffm.stepDefinitions.FFM_OT_Member_Login_Steps.i_should_be_able_to_navigate_to_the_ffm_platform()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-27T11:39:17.193Z",
+        "before": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\n\tat com.ffm.utils.TestBase.initializeDriver(TestBase.java:43)\n\tat com.ffm.stepDefinitions.Hooks.setup(Hooks.java:12)\n",
+              "duration": 26000000,
+              "status": "failed"
+            },
+            "match": {
+              "location": "com.ffm.stepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "FFM OT Member should login successfully through datadriven",
+        "description": "",
+        "id": "ffm-ot-member-login-panel;ffm-ot-member-should-login-successfully-through-datadriven;;4",
+        "after": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\n\tat com.ffm.stepDefinitions.Hooks.tearDown(Hooks.java:31)\n",
+              "duration": 5001000000,
+              "status": "failed"
+            },
+            "match": {
+              "location": "com.ffm.stepDefinitions.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "As an FFM OT member I should give the baseURl to navigate the login panel",
+            "match": {
+              "location": "com.ffm.stepDefinitions.FFM_OT_Member_Login_Steps.as_an_ffm_ot_member_i_should_give_the_base_u_rl_to_navigate_the_login_panel()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "I will input registered \"user@example.com\" and \"string\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"user@example.com\"",
+                  "offset": 24
+                },
+                {
+                  "val": "\"string\"",
+                  "offset": 47
+                }
+              ],
+              "location": "com.ffm.stepDefinitions.FFM_OT_Member_Login_Steps.i_will_input_registered_email_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "Click on the login button",
+            "match": {
+              "location": "com.ffm.stepDefinitions.FFM_OT_Member_Login_Steps.click_on_the_login_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "I should be able to navigate to the FFM platform",
+            "match": {
+              "location": "com.ffm.stepDefinitions.FFM_OT_Member_Login_Steps.i_should_be_able_to_navigate_to_the_ffm_platform()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "FFM OT Member Login Panel",
+    "description": "",
+    "id": "ffm-ot-member-login-panel",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/com/ffm/features/TechServe4U_FFM_01_ffmOTLogin.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-07-27T11:39:22.234Z",
+        "before": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\n\tat com.ffm.utils.TestBase.initializeDriver(TestBase.java:43)\n\tat com.ffm.stepDefinitions.Hooks.setup(Hooks.java:12)\n",
+              "duration": 25000000,
+              "status": "failed"
+            },
+            "match": {
+              "location": "com.ffm.stepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "FFM OT Member should create another OT member",
+        "description": "",
+        "id": "create-ffm-ot-member;ffm-ot-member-should-create-another-ot-member",
+        "after": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\n\tat com.ffm.stepDefinitions.Hooks.tearDown(Hooks.java:31)\n",
+              "duration": 5001000000,
+              "status": "failed"
+            },
+            "match": {
+              "location": "com.ffm.stepDefinitions.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "As an FFM OT member I should logged in the FFM platform",
+            "match": {
+              "location": "com.ffm.stepDefinitions.FFM_OT_Member_Create_Steps.as_an_ffm_ot_member_i_should_logged_in_the_ffm_platform()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "I click on the add super admin span",
+            "match": {
+              "location": "com.ffm.stepDefinitions.FFM_OT_Member_Create_Steps.i_click_on_the_add_super_admin_span()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "I should input all the required fields",
+            "match": {
+              "location": "com.ffm.stepDefinitions.FFM_OT_Member_Create_Steps.i_should_input_all_the_required_fields()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "I click on the register button",
+            "match": {
+              "location": "com.ffm.stepDefinitions.FFM_OT_Member_Create_Steps.i_click_on_the_register_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "It should creates an OT member",
+            "match": {
+              "location": "com.ffm.stepDefinitions.FFM_OT_Member_Create_Steps.it_should_creates_an_ot_member()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Create FFM OT Member",
+    "description": "",
+    "id": "create-ffm-ot-member",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/com/ffm/features/TechServe4U_FFM_02_ffmOTMemberCreate.feature",
+    "tags": []
+  }
+]

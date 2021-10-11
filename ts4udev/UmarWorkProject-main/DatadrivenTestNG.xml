@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DataDriven"  >
+	
+	<!--Value for browserFlagO can be firfox, chrome, ie, safari, mobileByBrowserStack, mobileByCBT -->
+	<test name="DTE New User Start Service - Google Chrome">
+		<parameter name="browserFlagO" value="chrome" />
+		<parameter name="runningOnGrid" value="false" />
+		<parameter name="hubHost" value="0" />
+		<parameter name="hubPort" value="0" />
+		<classes>
+			 <class name="com.perficient.testCases.DTE.ExcelToDataProviderTest" />
+		</classes>
+	</test>
+
+</suite>  

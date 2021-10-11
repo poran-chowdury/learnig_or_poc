@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Negative TestCases">
+
+	<!--Value for browserFlagO can be firfox, chrome, ie, safari, mobileByBrowserStack, 
+		mobileByCBT -->
+	<listeners>
+		<listener
+			class-name="com.perficient.util.listeners.ElasticListener" />
+	</listeners>
+	<test name="DTE Address Page Negative TestCases - IE ">
+		<parameter name="platform" value="windows" />
+		<parameter name="browserFlagO" value="ie" />
+		<parameter name="runningOnGrid" value="false" />
+		<parameter name="hubHost" value="0" />
+		<parameter name="hubPort" value="0" />
+		<classes>
+			<class name="com.perficient.testCases.DTE.SampleErrorDTETest" />
+		</classes>
+	</test>
+</suite>   

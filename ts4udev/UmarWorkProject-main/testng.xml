@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="FunctionalFlow">
+	<listeners>
+		<listener class-name = "com.perficient.util.listeners.ElasticListener"/>
+	</listeners>
+		<test name="DTE New User Start Service - Firefox">
+	<parameter name="browserFlagO" value="firefox" />
+		<parameter name="runningOnGrid" value="false" />
+		<parameter name="hubHost" value="0" />
+		<parameter name="hubPort" value="0" />
+		
+		<classes>
+		<class name="com.perficient.testCases.DTE.SampleDTE" /> 
+		</classes>
+	</test>
+	
+	
+	<test name="DTE Address Page Negative TestCases - Firefox">
+		<parameter name="browserFlagO" value="Firefox" />
+		<parameter name="runningOnGrid" value="false" />
+		<parameter name="hubHost" value="0" />
+		<parameter name="hubPort" value="0" />
+		<classes>
+			<class name="com.perficient.testCases.DTE.SampleErrorDTETest" />
+		</classes>
+		
+	</test>
+</suite>   
