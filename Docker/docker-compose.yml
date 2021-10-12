@@ -1,0 +1,48 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+#      args:
+#        ACTIVE_PROFILE: local
+#        UPLOAD_BASE_PATH: /src/uploads
+      dockerfile: .docker/DockerFile
+    image: towfiq-php-project
+    ports:
+      - 8080:80
+    volumes:
+      - .:/src/project
+#      - ../uploads:/src/uploads
+    links:
+      - mysql
+    environment:
+      APP_NAME: "Towfiq PHP Project"
+      APP_ENV: development
+      APP_DEBUG: "true"
+      APP_URL: "http://localhost:8080"
+      QUEUE_CONNECTION: database
+#      DB_HOST: mysql
+#      DB_DATABASE:
+#      DB_USERNAME:
+#      DB_PASSWORD:
+#      UPLOAD_BASE_PATH: /src/uploads
+      MAIL_DRIVER: smtp
+      MAIL_HOST: smtp.gmail.com
+      MAIL_PORT: 465
+      MAIL_USERNAME: iiucbees@gmail.com
+      MAIL_PASSWORD: 123@bees@456
+      MAIL_ENCRYPTION: ssl
+      MAIL_FROM_ADDRESS: iiucbees@gmail.com
+      MAIL_FROM_NAME: "Towfiq PHP Project"
+#    entrypoint: ["/src/health-recommendation-engine/.docker/services.sh", "-D", "FOREGROUND"]
+  mysql:
+    image: mysql:5.7
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_DATABASE: towfiq-php-project
+      MYSQL_USER: towfiq
+      MYSQL_PASSWORD: towfiq@123
+      MYSQL_ROOT_PASSWORD: towfiq@123
+#    volumes:
+#      - ../mysql:/var/lib/mysql

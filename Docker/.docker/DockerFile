@@ -1,0 +1,48 @@
+FROM php:7.3-apache
+
+COPY . /src/project
+
+COPY .docker/vhost.conf /etc/apache2/sites-available/000-default.conf
+
+# ARG ACTIVE_PROFILE
+# ARG UPLOAD_BASE_PATH
+
+# ENV ACTIVE_PROFILE=$ACTIVE_PROFILE
+# ENV JWKS_SOURCE=local
+# ENV UPLOAD_BASE_PATH=$UPLOAD_BASE_PATH
+
+RUN apt-get update \
+    && apt-get install -y \
+    zlib1g-dev \
+    libzip-dev \
+    cron
+
+# default services configuration file
+RUN chmod -R 777 /src/project/.docker/services.sh
+
+# Setup cron job
+# RUN touch /var/log/cron.log
+# RUN chmod -R 777 /var/log/cron.log
+# RUN chmod -R 777 /src/project/.docker/cron.sh
+# RUN chmod -R 777 /src/project/.docker/env.sh
+
+# RUN (crontab -l ; echo "SHELL=/bin/bash") | crontab
+# RUN (crontab -l ; echo "* * * * * bash /src/project/.docker/cron.sh") | crontab
+#
+
+RUN docker-php-ext-install mbstring pdo pdo_mysql mysqli zip bcmath
+
+RUN pecl install mailparse && docker-php-ext-enable mailparse
+RUN pecl install redis && docker-php-ext-enable redis
+
+RUN chown -R www-data:www-data /src/project/
+
+#RUN service apache2 restart
+
+#RUN chmod -R 777 /src/project/bootstrap/ \
+#    /src/project/storage/
+
+#RUN service cron restart
+#RUN service cron reload
+
+#CMD service cron start
