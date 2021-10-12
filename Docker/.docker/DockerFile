@@ -18,7 +18,7 @@ RUN apt-get update \
     cron
 
 # default services configuration file
-RUN chmod -R 777 /src/project/.docker/services.sh
+# RUN chmod -R 777 /src/project/.docker/services.sh
 
 # Setup cron job
 # RUN touch /var/log/cron.log
