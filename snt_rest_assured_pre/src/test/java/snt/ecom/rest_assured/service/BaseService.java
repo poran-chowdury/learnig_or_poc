@@ -29,17 +29,16 @@ public class BaseService {
     protected Gson gson = new Gson();
 
     protected String randomString() {
-        int leftLimit = 48; // numeral '0'
+        int leftLimit = 97; // letter 'a'
         int rightLimit = 122; // letter 'z'
         int targetStringLength = 10;
         Random random = new Random();
+        String generatedString = random.ints(leftLimit, rightLimit + 1)
+                .limit(targetStringLength)
+                .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
+                .toString();
 
-        return random
-            .ints(leftLimit, rightLimit + 1)
-            .filter(i -> (i <= 57 || i >= 65) && (i <= 90 || i >= 97))
-            .limit(targetStringLength)
-            .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
-            .toString();
+        return generatedString;
     }
 
     protected void validateAndAttachResponse(AttachmentName attachmentName, Response response) {
@@ -59,7 +58,6 @@ public class BaseService {
 
     protected void validateAndAttachDBTestResult(AttachmentName attachmentName, String request, String response) {
 
-        Allure.addAttachment(attachmentName.getAttachmentName() + "Request", request);
         Allure.addAttachment(attachmentName.getAttachmentName() + "Request", request);
 
         Allure.addAttachment(

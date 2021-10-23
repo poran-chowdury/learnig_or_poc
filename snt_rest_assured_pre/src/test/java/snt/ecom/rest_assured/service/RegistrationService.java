@@ -28,6 +28,8 @@ public class RegistrationService extends BaseService {
 
         System.out.println("registerCustomer");
 
+        email = randomString() + email;
+
         response = requests.postRequest(
             EndPoints.registration,
             bodyBuilder.getRegistrationRequestBody(name, email, password)
