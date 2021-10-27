@@ -37,8 +37,8 @@ public class Hooks {
      * db connection
      */
     @After
-    public void closeUIApplication() {
-        System.out.println("closeUIApplication");
+    public void tearDownApplication() {
+        System.out.println("tearDownApplication");
 
         if (DBService.dbConnection != null) {
             DBService.closeDBConnection();
