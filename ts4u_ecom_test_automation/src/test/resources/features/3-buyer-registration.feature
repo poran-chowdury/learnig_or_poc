@@ -7,4 +7,5 @@ Feature: Customer Registration
         Then Make otp isVerified "true" for email "<email>"
         Examples:
             | name   | email                | password   |
-            | Towfiq | towfiq.106@gmail.com | towfiq@123 |
+        #    | Towfiq | towfiq.106@gmail.com | towfiq@123 |
+            | Towfiq | towfiq-test.106@gmail.com | towfiq@123 |

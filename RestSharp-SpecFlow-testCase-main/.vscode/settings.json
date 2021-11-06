@@ -1,0 +1,16 @@
+// {
+//     "cucumberautocomplete.steps": ["./**/*.cs"]
+// }
+{
+    "workbench.colorTheme": "Default Dark+",
+    "editor.quickSuggestions": true,
+    "window.zoomLevel": -1,
+    "gherkin-autocomplete.featuresPath": "Features/*.feature",
+    "cucumberautocomplete.steps": [
+        "./Steps/**/*.cs"
+    ],
+
+    "cucumberautocomplete.strictGherkinCompletion": true,
+
+    "cucumberautocomplete.syncfeatures": "Features/*.feature"
+}

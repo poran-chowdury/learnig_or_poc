@@ -1,0 +1,65 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "rezi",
+      "author": "typicode"
+    },
+    {
+      "id": "5",
+      "title": "Tutorial",
+      "author": "Raju"
+    },
+    {
+      "id": "6",
+      "title": "Tutorial",
+      "author": "Raju"
+    },
+    {
+      "id": "3",
+      "title": "Tutorial",
+      "author": "Raju"
+    },
+    {
+      "id": "4",
+      "title": "Tutorial",
+      "author": "Raju"
+    },
+    {
+      "id": "12",
+      "title": "Tutorial",
+      "author": "Raju"
+    },
+    {
+      "id": "14",
+      "title": "Tutorial",
+      "author": "Raju"
+    },
+    {
+      "id": "17",
+      "title": "Tutorial",
+      "author": "Raju"
+    },
+    {
+      "id": "7",
+      "title": "Tutorial",
+      "author": "Rezaul"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "raju",
+    "postId": "3"
+  }
+}
