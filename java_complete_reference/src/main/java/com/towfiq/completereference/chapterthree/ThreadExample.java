@@ -2,8 +2,9 @@ package com.towfiq.completereference.chapterthree;
 
 /**
  * @author TOWFIQUL ISLAM
- * @since 05/08/2021 16:52
+ * @email towfiq.106@gmail.com
+ * @since 1/9/22 3:01 PM
  */
 
-public class DataType {
+public class ThreadExample {
 }
