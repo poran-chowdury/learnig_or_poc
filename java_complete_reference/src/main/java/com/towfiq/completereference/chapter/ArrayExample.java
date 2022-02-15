@@ -1,4 +1,4 @@
-package com.towfiq.completereference.chapterthree;
+package com.towfiq.completereference.chapter;
 
 import java.util.ArrayList;
 
