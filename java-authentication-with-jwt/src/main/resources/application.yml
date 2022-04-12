@@ -1,0 +1,28 @@
+server:
+  port: 8087
+spring:
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      dialect: org.hibernate.dialect.MySQL5Dialect
+  datasource:
+    platform: mysql
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/securitydb?createDatabaseIfNotExist=true
+    username: root
+    password: 1234
+    driverClassName: com.mysql.jdbc.Driver
+logging:
+  level:
+    org.springframework: WARN
+    org.springframework.security: WARN
+    org.hibernate: WARN
+    org.apache: WARN
+
+jwt:
+  secret: forman217775
+  jwtExpirationInMs: 18000000
+fixer:
+  access_key: 6afdfd081d62c4c22d1b2f5b526cce53

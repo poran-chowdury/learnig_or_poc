@@ -1,0 +1,28 @@
+version: '3.5'
+services:
+  nginx:
+    build:
+      context: .
+    image: proxy-nginx
+    container_name: proxy-nginx
+    ports:
+      - "3128:3128"
+
+# docker-compose run --rm proxy
+# The UPSTREAM service must be running.
+# https://proxy.projectname.vm
+#version: '3.5'
+#services:
+#  proxy:
+#    image: outrigger/https-proxy:1.0
+#    container_name: projectname_http_proxy
+#  #  depends_on:
+#  #    - api
+#    labels:
+#      com.dnsdock.name: proxy
+#      com.dnsdock.image: projectname
+#    environment:
+#      UPSTREAM_DOMAIN: localhost
+##      UPSTREAM_PORT: 443
+#      PROXY_DOMAIN: server-proxy.gkb.ch
+##  network_mode: bridge
