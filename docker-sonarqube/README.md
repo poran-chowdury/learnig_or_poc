@@ -9,3 +9,16 @@
  * **step 5:** run: ```$ ./maven-clean-install <token>```
  * **or** run: ```mvn clean install  sonar:sonar  -Dsonar.host.url=http://localhost:9000   -Dsonar.login=<token>```
  * **step 6:** to check report goto: http://localhost:9000/projects
+
+
+#### For Gradle project please follow below instructions
+
+** Add below plugins in ```build.gradle``` file
+``` 
+plugins {
+    id "org.sonarqube" version "2.6"
+}
+```
+
+*** Use below command for running the project with sonar qube
+```./gradlew sonarqube -Dsonar.host.url=http://localhost:9000 -Dsonar.login=<token>```
