@@ -6,9 +6,9 @@
  * **step 3:** login:password=admin:admin
  * **step 4:** goto: http://localhost:9000/account/security/
  * **step 5:** generate token using a token name and save the token
- * **step 5:** run: ```$ ./maven-clean-install <token>```
+ * **step 6:** run: ```$ ./maven-clean-install <token>```
  * **or** run: ```mvn clean install  sonar:sonar  -Dsonar.host.url=http://localhost:9000   -Dsonar.login=<token>```
- * **step 6:** to check report goto: http://localhost:9000/projects
+ * **step 7:** to check report goto: http://localhost:9000/projects
 
 
 #### For Gradle project please follow below instructions
