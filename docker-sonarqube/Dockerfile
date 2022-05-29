@@ -1,3 +1,3 @@
-FROM sonarqube:7.5-community
+FROM sonarqube:8.9-community
 
 COPY ./plugins/* /opt/sonarqube/extensions/plugins/
