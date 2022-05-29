@@ -1,15 +1,5 @@
-/**
- * @author TOWFIQUL ISLAM
- * @email towfiq.106@gmail.com
- * @since 4/4/22 3:15 PM
- */
+package com.towfiq.completereference.designpattern;
 
-public class Example {
-
-    public static void main(String[] args) {
-
-    }
-}
 
 class SingletonExample {
     private static SingletonExample object;
