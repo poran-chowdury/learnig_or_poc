@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+
+  rabbitmq:
+    image: rabbitmq:3-management
+      #restart: always
+    ports:
+      - 15672:15672
+      - 5672:5672
+    environment:
+      RABBITMQ_DEFAULT_USER: rabbituser
+      RABBITMQ_DEFAULT_PASS: rabbitpass
+

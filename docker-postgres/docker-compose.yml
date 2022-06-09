@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+
+  postgres:
+    image: postgres
+      #restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: test
+      POSTGRES_USER: dbuser
+      POSTGRES_PASSWORD: dbpass
+
+  adminer:
+    image: adminer
+      #restart: always
+    ports:
+      - 8080:8080
