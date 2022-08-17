@@ -1,0 +1,2 @@
+1.cd c_in_java/src/main/java
+2.sh ch/company/poc/project/generateNativeLibAndJavaExecute.sh

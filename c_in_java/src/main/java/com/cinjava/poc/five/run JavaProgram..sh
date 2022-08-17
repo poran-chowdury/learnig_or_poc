@@ -1,0 +1,1 @@
+java -cp . -Djava.library.path=/home/towfiq/learning/learnig_or_poc/c_in_java/src/main/java/com/cinjava/poc/five/ com.cinjava.poc.five.HelloWorldJNI.class
