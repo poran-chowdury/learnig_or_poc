@@ -4,12 +4,10 @@
 #include <err.h>
 #include <stdio.h>
 #include <string.h>
+#include "mbus/mbus.h"
 using namespace std;
 
-#ifdef __cplusplus
 extern "C" {
-#include "mbus/mbus.h"
-#endif
 
 /*
  * Class:     ch_company_poc_project_MbusApplication
@@ -32,12 +30,7 @@ string jstringToString(JNIEnv *env, jstring jStr);
 JNIEXPORT jstring JNICALL Java_ch_company_poc_project_MbusApplication_decodeHexValue (JNIEnv *env, jobject thisObject, jstring hexDataForDecode) {
 	string convertedStr = jstringToString(env, hexDataForDecode);
 	string result = "";
-//	result = getDecodedHexValue(convertedStr);
-	result += "\nCPP File => Tested Done : " + convertedStr;
-	char someInput[100];
-	cin >> someInput;
-	printf("Input taken in CPP File => %s\n", someInput);
-	printf("I am printing from CPP file\n");
+	result = getDecodedHexValue(convertedStr);
     return env->NewStringUTF(result.c_str());
 }
 
@@ -45,12 +38,12 @@ JNIEXPORT jstring JNICALL Java_ch_company_poc_project_MbusApplication_decodeHexV
 * Custom Method Definitions
 */
 string getDecodedHexValue(string hexDataForDecode) {
-
     size_t buff_len;
-    int result;
+    int result, normalized = 0;
     unsigned char raw_buff[4096], buff[4096];
     mbus_frame reply;
     mbus_frame_data frame_data;
+    char *xml_result = NULL;
 
     memset(raw_buff, 0, sizeof(raw_buff));
     strcpy((char*) raw_buff, hexDataForDecode.c_str());
@@ -64,12 +57,12 @@ string getDecodedHexValue(string hexDataForDecode) {
 
     if (result < 0)
     {
-        printf("mbus_parse: %s\n", mbus_error_str());
+        cout << "mbus_parse: " << mbus_error_str() << endl;
         return "1";
     }
     else if (result > 0)
     {
-        printf("mbus_parse: need %d more bytes\n", result);
+        cout << "mbus_parse: need " << result << " more bytes" << endl;
         return "1";
     }
 
@@ -78,11 +71,25 @@ string getDecodedHexValue(string hexDataForDecode) {
     if (result != 0)
     {
         mbus_frame_print(&reply);
-        printf("mbus_frame_data_parse: %s\n", mbus_error_str());
+        cout << "mbus_frame_data_parse: " << mbus_error_str() << endl;
         return "1";
     }
 
-    return hexDataForDecode + " Found This Data";
+    //mbus_frame_print(&reply);
+    //mbus_frame_data_print(&frame_data);
+
+    xml_result = normalized ? mbus_frame_data_xml_normalized(&frame_data) : mbus_frame_data_xml(&frame_data);
+
+    if (xml_result == NULL)
+    {
+        fprintf(stderr, "Failed to generate XML representation of MBUS frame: %s\n", mbus_error_str());
+        return "1";
+    }
+//    printf("%s", xml_result);
+    free(xml_result);
+    mbus_data_record_free(frame_data.data_var.record);
+
+    return result == 0 ? xml_result : to_string(result);
 }
 
 string jstringToString(JNIEnv *env, jstring jStr) {
@@ -104,6 +111,4 @@ string jstringToString(JNIEnv *env, jstring jStr) {
     return result;
 }
 
-#ifdef __cplusplus
-} //pay attention to this
-#endif
+}
